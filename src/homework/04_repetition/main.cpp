@@ -1,7 +1,6 @@
 //write include statements
 #include <iostream>
 #include "repetition.h"
-#include "repetition.cpp"
 
 //write using statements
 using std::string;

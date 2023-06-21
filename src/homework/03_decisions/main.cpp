@@ -1,7 +1,6 @@
 //write include statements
 #include <iostream>
 #include "decisions.h"
-#include "decisions.cpp"
 
 using std::string;
 using std::cout;

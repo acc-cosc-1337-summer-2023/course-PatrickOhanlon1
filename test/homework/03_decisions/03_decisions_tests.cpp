@@ -1,7 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <iostream>
 #include "decisions.h"
-#include "decisions.cpp"
 #include <catch.hpp>
 
 TEST_CASE("Test get_letter_grade_using_if")
