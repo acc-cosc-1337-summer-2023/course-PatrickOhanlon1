@@ -29,12 +29,19 @@ TEST_CASE("Test if the board is full")
 	TicTacToe game;
 
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(4);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(7);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(6);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(9);
 	REQUIRE(game.game_over() == false);
 	game.mark_board(8);
@@ -50,17 +57,20 @@ TEST_CASE("Win by first column")
 
 	// Mark board with x
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(4);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(7);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by second column")
@@ -71,17 +81,20 @@ TEST_CASE("Win by second column")
 
 	// Mark board with x
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(8);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by third column")
@@ -92,17 +105,20 @@ TEST_CASE("Win by third column")
 
 	// Mark board with x
 	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(6);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(9);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by first row")
@@ -113,17 +129,20 @@ TEST_CASE("Win by first row")
 
 	// Mark board with x
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(4);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(3);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by second row")
@@ -134,17 +153,20 @@ TEST_CASE("Win by second row")
 
 	// Mark board with x
 	game.mark_board(4);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(6);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by third row")
@@ -155,17 +177,20 @@ TEST_CASE("Win by third row")
 
 	// Mark board with x
 	game.mark_board(7);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(8);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(9);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by diagonally from top left")
@@ -176,17 +201,20 @@ TEST_CASE("Win by diagonally from top left")
 
 	// Mark board with x
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(9);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
 
 TEST_CASE("Win by diagonally from bottom left")
@@ -197,15 +225,18 @@ TEST_CASE("Win by diagonally from bottom left")
 
 	// Mark board with x
 	game.mark_board(7);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
 	// Mark board with o
 	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
 	// Mark board with x
 	game.mark_board(3);
-
-	bool x_wins_by_column = game.game_over() == true && game.get_winner() == "X";
-	REQUIRE(x_wins_by_column == true);
+	REQUIRE(game.game_over() == true);
+	REQUIRE(game.get_winner() == "X");
 }
